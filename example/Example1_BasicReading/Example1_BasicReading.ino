@@ -14,22 +14,25 @@
 #include <Wire.h>
 
 ADS1015 irsensor;                   //Initialize using ADS1015 library
+float multiplier;
 
 void setup() {
-  Wire.begin();
   Serial.begin(9600);
+  Wire.begin();   //Join I2C bus
 
-  if(irsensor.begin(Wire,100000,ADS1015_ADDRESS_GND) == false){
+  if(irsensor.begin() == false){
     Serial.println("Device not found. Check wiring, then restart.");
     while(1);
   }
+  multiplier = irsensor.getMultiplier();
 }
 
 void loop() {
   int data;
   data = irsensor.getAnalogData(0);   //Retrieve raw data value from sensor
-  Serial.print("Raw Data Value: ");
-  Serial.println(data);
-  delay(500);                         //Sample data reading every half second
-
+//  Serial.print("ADC input voltage: ");
+//  Serial.print(data * multiplier);
+//  Serial.println("mV");
+  Serial.println(data * multiplier);
+  delay(50);                         //Sample data reading every half second
 }

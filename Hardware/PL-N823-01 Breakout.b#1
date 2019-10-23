@@ -52,7 +52,7 @@
 <layer number="94" name="Symbols" color="4" fill="1" visible="no" active="no"/>
 <layer number="95" name="Names" color="7" fill="1" visible="no" active="no"/>
 <layer number="96" name="Values" color="7" fill="1" visible="no" active="no"/>
-<layer number="2" name="Route2" color="16" fill="1" visible="no" active="yes"/>
+<layer number="2" name="Route2" color="16" fill="1" visible="no" active="no"/>
 <layer number="3" name="Route3" color="17" fill="1" visible="no" active="no"/>
 <layer number="4" name="Route4" color="18" fill="1" visible="no" active="no"/>
 <layer number="5" name="Route5" color="19" fill="1" visible="no" active="no"/>
@@ -65,7 +65,7 @@
 <layer number="12" name="Route12" color="20" fill="1" visible="no" active="no"/>
 <layer number="13" name="Route13" color="21" fill="1" visible="no" active="no"/>
 <layer number="14" name="Route14" color="22" fill="1" visible="no" active="no"/>
-<layer number="15" name="Route15" color="23" fill="1" visible="no" active="yes"/>
+<layer number="15" name="Route15" color="23" fill="1" visible="no" active="no"/>
 <layer number="53" name="tGND_GNDA" color="7" fill="9" visible="no" active="no"/>
 <layer number="54" name="bGND_GNDA" color="1" fill="9" visible="no" active="no"/>
 <layer number="56" name="wert" color="7" fill="1" visible="no" active="no"/>
@@ -3113,33 +3113,29 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <class number="1" name="power" width="0.3048" drill="0">
 </class>
 </classes>
-<designrules name="SparkFun-4-layer-FAB-LIMIT">
-<description language="en">&lt;b&gt;EAGLE Design Rules&lt;/b&gt;
+<designrules name="SparkFun-2-layer-PCBWay-LIMIT">
+<description language="en">&lt;b&gt;SparkFun 2 Layer Design Rule Checks - Limits for PCBWay&lt;/b&gt;
 &lt;p&gt;
-The default Design Rules have been set to cover
-a wide range of applications. Your particular design
-may have different requirements, so please make the
-necessary adjustments and save your customized
-design rules under a new name.</description>
-<param name="layerSetup" value="(1*2*15*16)"/>
-<param name="mtCopper" value="0.035559375mm 0.035559375mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035559375mm 0.035559375mm"/>
-<param name="mtIsolate" value="0.47751875mm 0.47751875mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.47751875mm"/>
-<param name="mdWireWire" value="5mil"/>
-<param name="mdWirePad" value="5mil"/>
-<param name="mdWireVia" value="5mil"/>
-<param name="mdPadPad" value="5mil"/>
-<param name="mdPadVia" value="5mil"/>
-<param name="mdViaVia" value="5mil"/>
-<param name="mdSmdPad" value="5mil"/>
-<param name="mdSmdVia" value="5mil"/>
-<param name="mdSmdSmd" value="5mil"/>
+ If you're ordering from PCBWay, these are the 'free' minimums.</description>
+<param name="layerSetup" value="(1*16)"/>
+<param name="mtCopper" value="0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm"/>
+<param name="mtIsolate" value="1.5mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm"/>
+<param name="mdWireWire" value="6mil"/>
+<param name="mdWirePad" value="6mil"/>
+<param name="mdWireVia" value="6mil"/>
+<param name="mdPadPad" value="6mil"/>
+<param name="mdPadVia" value="6mil"/>
+<param name="mdViaVia" value="6mil"/>
+<param name="mdSmdPad" value="6mil"/>
+<param name="mdSmdVia" value="6mil"/>
+<param name="mdSmdSmd" value="6mil"/>
 <param name="mdViaViaSameLayer" value="8mil"/>
 <param name="mnLayersViaInSmd" value="2"/>
-<param name="mdCopperDimension" value="4mil"/>
-<param name="mdDrill" value="4mil"/>
+<param name="mdCopperDimension" value="6mil"/>
+<param name="mdDrill" value="6mil"/>
 <param name="mdSmdStop" value="0mil"/>
-<param name="msWidth" value="4mil"/>
-<param name="msDrill" value="6mil"/>
+<param name="msWidth" value="6mil"/>
+<param name="msDrill" value="0.3mm"/>
 <param name="msMicroVia" value="9.99mm"/>
 <param name="msBlindViaRatio" value="0.5"/>
 <param name="rvPadTop" value="0.25"/>
@@ -3149,19 +3145,19 @@ design rules under a new name.</description>
 <param name="rvViaInner" value="0.25"/>
 <param name="rvMicroViaOuter" value="0.25"/>
 <param name="rvMicroViaInner" value="0.25"/>
-<param name="rlMinPadTop" value="5mil"/>
+<param name="rlMinPadTop" value="6mil"/>
 <param name="rlMaxPadTop" value="20mil"/>
 <param name="rlMinPadInner" value="6mil"/>
 <param name="rlMaxPadInner" value="20mil"/>
-<param name="rlMinPadBottom" value="5mil"/>
+<param name="rlMinPadBottom" value="6mil"/>
 <param name="rlMaxPadBottom" value="20mil"/>
-<param name="rlMinViaOuter" value="5mil"/>
+<param name="rlMinViaOuter" value="6mil"/>
 <param name="rlMaxViaOuter" value="20mil"/>
 <param name="rlMinViaInner" value="6mil"/>
 <param name="rlMaxViaInner" value="20mil"/>
-<param name="rlMinMicroViaOuter" value="4mil"/>
+<param name="rlMinMicroViaOuter" value="6mil"/>
 <param name="rlMaxMicroViaOuter" value="20mil"/>
-<param name="rlMinMicroViaInner" value="4mil"/>
+<param name="rlMinMicroViaInner" value="6mil"/>
 <param name="rlMaxMicroViaInner" value="20mil"/>
 <param name="psTop" value="-1"/>
 <param name="psBottom" value="-1"/>
@@ -3387,20 +3383,20 @@ design rules under a new name.</description>
 <element name="U$3" library="buzzard_labels (62)" package="INT0" value="" x="17.78" y="1.651" smashed="yes" rot="MR90"/>
 <element name="U$4" library="buzzard_labels_pln82301" package="PL#N823#01_BREAKOUT0" value="" x="21.59" y="21.59" smashed="yes" rot="MR0"/>
 <element name="U$5" library="Labels" package="I_SUPER2_C-()-03" value="" x="14.097" y="10.668" smashed="yes" rot="MR0"/>
-<element name="D1" library="SparkFun-LED" package="LED-0603" value="RED" x="22.86" y="19.05" smashed="yes" rot="R180">
-<attribute name="NAME" x="22.86" y="18.415" size="0.6096" layer="25" font="vector" ratio="20" rot="R180" align="bottom-center"/>
-<attribute name="PROD_ID" value="DIO-00819" x="22.86" y="19.05" size="1.778" layer="27" font="vector" ratio="15" rot="R180" display="off"/>
-<attribute name="VALUE" x="22.86" y="19.685" size="0.6096" layer="27" font="vector" ratio="20" rot="R180" align="top-center"/>
+<element name="D1" library="SparkFun-LED" package="LED-0603" value="RED" x="1.27" y="-3.81" smashed="yes">
+<attribute name="NAME" x="1.27" y="-3.175" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center"/>
+<attribute name="PROD_ID" value="DIO-00819" x="1.27" y="-3.81" size="1.778" layer="27" font="vector" ratio="15" display="off"/>
+<attribute name="VALUE" x="1.27" y="-4.445" size="0.6096" layer="27" font="vector" ratio="20" align="top-center"/>
 </element>
-<element name="R1" library="SparkFun-Resistors" package="0603" value="1k" x="22.86" y="17.78" smashed="yes">
-<attribute name="NAME" x="22.86" y="18.542" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center"/>
-<attribute name="PROD_ID" value="RES-07856" x="22.86" y="17.78" size="1.778" layer="27" font="vector" ratio="15" display="off"/>
-<attribute name="VALUE" x="22.86" y="17.018" size="0.6096" layer="27" font="vector" ratio="20" align="top-center"/>
+<element name="R1" library="SparkFun-Resistors" package="0603" value="1k" x="1.27" y="-7.62" smashed="yes">
+<attribute name="NAME" x="1.27" y="-6.858" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center"/>
+<attribute name="PROD_ID" value="RES-07856" x="1.27" y="-7.62" size="1.778" layer="27" font="vector" ratio="15" display="off"/>
+<attribute name="VALUE" x="1.27" y="-8.382" size="0.6096" layer="27" font="vector" ratio="20" align="top-center"/>
 </element>
-<element name="R8" library="SparkFun-Resistors" package="0603" value="1.20k" x="6.35" y="19.05" smashed="yes" rot="R90">
-<attribute name="NAME" x="5.588" y="19.05" size="0.6096" layer="25" font="vector" ratio="20" rot="R90" align="bottom-center"/>
-<attribute name="PROD_ID" value="RES-08413" x="6.35" y="19.05" size="1.778" layer="27" font="vector" ratio="15" rot="R90" display="off"/>
-<attribute name="VALUE" x="7.112" y="19.05" size="0.6096" layer="27" font="vector" ratio="20" rot="R90" align="top-center"/>
+<element name="R8" library="SparkFun-Resistors" package="0603" value="1.20k" x="1.27" y="-11.43" smashed="yes">
+<attribute name="NAME" x="1.27" y="-10.668" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center"/>
+<attribute name="PROD_ID" value="RES-08413" x="1.27" y="-11.43" size="1.778" layer="27" font="vector" ratio="15" display="off"/>
+<attribute name="VALUE" x="1.27" y="-12.192" size="0.6096" layer="27" font="vector" ratio="20" align="top-center"/>
 </element>
 </elements>
 <signals>
@@ -3438,6 +3434,26 @@ design rules under a new name.</description>
 <via x="19.05" y="10.541" extent="1-16" drill="0.3048"/>
 <via x="20.447" y="19.685" extent="1-16" drill="0.3048"/>
 <contactref element="D1" pad="C"/>
+<wire x1="19.05" y1="19.9" x2="20.447" y2="19.685" width="0" layer="19" extent="1-1"/>
+<wire x1="15.748" y1="14.224" x2="19.05" y2="19.9" width="0" layer="19" extent="1-1"/>
+<wire x1="13.825" y1="14.3125" x2="15.748" y2="14.224" width="0" layer="19" extent="1-1"/>
+<wire x1="15.875" y1="11.176" x2="15.748" y2="14.224" width="0" layer="19" extent="1-1"/>
+<wire x1="13.825" y1="11.0875" x2="15.875" y2="11.176" width="0" layer="19" extent="1-1"/>
+<wire x1="19.05" y1="10.541" x2="15.875" y2="11.176" width="0" layer="19" extent="1-1"/>
+<wire x1="20.32" y1="11.2" x2="19.05" y2="10.541" width="0" layer="19" extent="1-1"/>
+<wire x1="9.906" y1="16.002" x2="13.825" y2="14.3125" width="0" layer="19" extent="1-1"/>
+<wire x1="9.9" y1="17.145" x2="9.906" y2="16.002" width="0" layer="19" extent="1-1"/>
+<wire x1="8.89" y1="14.859" x2="9.906" y2="16.002" width="0" layer="19" extent="1-1"/>
+<wire x1="8.89" y1="13.55" x2="8.89" y2="14.859" width="0" layer="19" extent="1-1"/>
+<wire x1="6.477" y1="14.224" x2="8.89" y2="14.859" width="0" layer="19" extent="1-1"/>
+<wire x1="5.08" y1="14.2" x2="6.477" y2="14.224" width="0" layer="19" extent="1-1"/>
+<wire x1="7.62" y1="19.9" x2="9.9" y2="17.145" width="0" layer="19" extent="1-1"/>
+<wire x1="4.81" y1="21.1" x2="7.62" y2="19.9" width="0" layer="19" extent="1-1"/>
+<wire x1="3.81" y1="21.1" x2="4.81" y2="21.1" width="0" layer="19" extent="1-1"/>
+<wire x1="3.048" y1="22.225" x2="3.81" y2="21.1" width="0" layer="19" extent="1-1"/>
+<wire x1="4.953" y1="22.479" x2="4.81" y2="21.1" width="0" layer="19" extent="1-1"/>
+<wire x1="7.62" y1="1.27" x2="13.825" y2="11.0875" width="0" layer="19" extent="1-1"/>
+<wire x1="2.147" y1="-3.81" x2="7.62" y2="1.27" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$2">
 <contactref element="R2" pad="2"/>
@@ -3461,10 +3477,10 @@ design rules under a new name.</description>
 <wire x1="6.477" y1="20.955" x2="6.35" y2="20.828" width="0.2032" layer="1"/>
 <wire x1="9.9" y1="20.955" x2="6.477" y2="20.955" width="0.2032" layer="1"/>
 <wire x1="3.31" y1="21.1" x2="3.31" y2="20.193" width="0.2032" layer="1"/>
-<contactref element="R8" pad="2"/>
-<wire x1="3.603" y1="19.9" x2="6.35" y2="19.9" width="0.2032" layer="1"/>
 <wire x1="3.31" y1="20.193" x2="3.603" y2="19.9" width="0.2032" layer="1"/>
-<wire x1="6.35" y1="20.828" x2="6.35" y2="19.9" width="0.2032" layer="1"/>
+<contactref element="R8" pad="2"/>
+<wire x1="3.603" y1="19.9" x2="6.35" y2="20.828" width="0" layer="19" extent="1-1"/>
+<wire x1="2.12" y1="-11.43" x2="3.603" y2="19.9" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="SDA">
 <contactref element="R6" pad="2"/>
@@ -3536,7 +3552,7 @@ design rules under a new name.</description>
 <wire x1="9.144" y1="19.685" x2="8.763" y2="19.304" width="0.2032" layer="1"/>
 <wire x1="8.763" y1="19.304" x2="8.763" y2="18.669" width="0.2032" layer="1"/>
 <contactref element="R8" pad="1"/>
-<wire x1="6.35" y1="18.2" x2="7.62" y2="18.2" width="0.2032" layer="1"/>
+<wire x1="0.42" y1="-11.43" x2="7.62" y2="18.2" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$4">
 <contactref element="JP1" pad="3"/>
@@ -3559,9 +3575,9 @@ design rules under a new name.</description>
 <wire x1="22.86" y1="18.288" x2="24.765" y2="18.288" width="0.2032" layer="16"/>
 <via x="24.765" y="18.288" extent="1-16" drill="0.3048"/>
 <wire x1="24.765" y1="18.542" x2="24.765" y2="18.288" width="0.2032" layer="1"/>
-<wire x1="24.257" y1="19.05" x2="24.765" y2="18.542" width="0.2032" layer="1"/>
+<wire x1="24.765" y1="18.542" x2="24.257" y2="19.05" width="0.2032" layer="1"/>
 <contactref element="D1" pad="A"/>
-<wire x1="23.737" y1="19.05" x2="24.257" y2="19.05" width="0.2032" layer="1"/>
+<wire x1="0.393" y1="-3.81" x2="22.86" y2="18.288" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="N$3">
 <contactref element="JP2" pad="1"/>
@@ -3569,7 +3585,7 @@ design rules under a new name.</description>
 <wire x1="22.86" y1="17.272" x2="21.209" y2="17.272" width="0.2032" layer="16"/>
 <wire x1="21.209" y1="17.272" x2="20.701" y2="17.78" width="0.2032" layer="16"/>
 <contactref element="R1" pad="1"/>
-<wire x1="20.701" y1="17.78" x2="22.01" y2="17.78" width="0.2032" layer="1"/>
+<wire x1="0.42" y1="-7.62" x2="21.209" y2="17.272" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="!INT">
 <contactref element="U1" pad="2"/>
@@ -3626,7 +3642,7 @@ design rules under a new name.</description>
 <via x="10.16" y="7.112" extent="1-16" drill="0.3048"/>
 <wire x1="12.7" y1="7.874" x2="11.938" y2="7.112" width="0.2032" layer="16"/>
 <contactref element="R1" pad="2"/>
-<wire x1="23.71" y1="17.106" x2="23.71" y2="17.78" width="0.2032" layer="1"/>
+<wire x1="2.12" y1="-7.62" x2="10.16" y2="1.27" width="0" layer="19" extent="1-1"/>
 </signal>
 </signals>
 <mfgpreviewcolors>
@@ -3636,6 +3652,12 @@ design rules under a new name.</description>
 <mfgpreviewcolor name="coppercolor" color="0xFFD99F00"/>
 <mfgpreviewcolor name="substratecolor" color="0xFF786E46"/>
 </mfgpreviewcolors>
+<errors>
+<approved hash="21,19,19fc1bfe1bfe19fc"/>
+<approved hash="21,19,7018721a721a7018"/>
+<approved hash="3,16,1482bc6236519eb1"/>
+<approved hash="3,16,02fe81d9c7df44f8"/>
+</errors>
 </board>
 </drawing>
 <compatibility>

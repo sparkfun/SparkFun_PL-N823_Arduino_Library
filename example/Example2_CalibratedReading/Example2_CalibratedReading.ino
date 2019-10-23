@@ -34,10 +34,12 @@ void setup() {
   Wire.begin();
   Serial.begin(9600);
 
-  if(irsensor.begin(Wire,100000,ADS1015_ADDRESS_GND) == false){
+  if(irsensor.begin() == false){
     Serial.println("Device not found. Check wiring, then restart.");
     while(1);
   }
+  //Set PGA gain to 1
+//  irsensor.setGain(ADS1015_CONFIG_PGA_1);
 }
 
 void loop() {
@@ -45,7 +47,7 @@ void loop() {
 
   calibration(20);
   int tolerance = cal_value + 500;    //minimum value to indicate an 'event'
-  while(0){
+  while(1){
     data = irsensor.getAnalogData(0);   //Retrieve raw data value from sensor
     if(data > tolerance){
       Serial.println("Event Triggered! Great Scott, it works!");
