@@ -8,7 +8,7 @@
   This example samples background readings for calibration 
   and uses that to trigger 'found' events..
 
-  <product URL>
+  https://www.sparkfun.com/products/15804
  */
 
 #include <SparkFun_ADS1015_Arduino_Library.h>
@@ -17,10 +17,12 @@
 ADS1015 irsensor;                   //Initialize using ADS1015 library
 
 int cal_value;
+int tolerance = 500;
 
 void calibration(int cal_size){
     int cal_sum;
     Serial.println("Gathering Calibration Value");
+    delay(750);
     for(int i = 0; i < cal_size; i++){
       cal_sum+=irsensor.getAnalogData(0);
       delay(500);                   //Sample every half second
@@ -31,6 +33,7 @@ void calibration(int cal_size){
   }
 
 void setup() {
+  
   Wire.begin();
   Serial.begin(9600);
 
@@ -38,20 +41,21 @@ void setup() {
     Serial.println("Device not found. Check wiring, then restart.");
     while(1);
   }
-  //Set PGA gain to 1
-//  irsensor.setGain(ADS1015_CONFIG_PGA_1);
+  
+  calibration(10);
+  
 }
 
 void loop() {
+  
   int data;
-
-  calibration(20);
-  int tolerance = cal_value + 500;    //minimum value to indicate an 'event'
-  while(1){
-    data = irsensor.getAnalogData(0);   //Retrieve raw data value from sensor
-    if(data > tolerance){
-      Serial.println("Event Triggered! Great Scott, it works!");
-    }
+  int minimum = cal_value + tolerance;    //minimum value to indicate an 'event'
+  
+  data = irsensor.getAnalogData(0);       //Retrieve raw data value from sensor
+  
+  if(data > minimum){
+    Serial.println("Event Triggered! Great Scott, it works!");
     delay(500);                         //Sample data reading every half second
   }
+  
 }
