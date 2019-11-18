@@ -8,7 +8,6 @@ SparkFun Qwiic PL-N823 IR Breakout
 Repository Contents
 -------------------
 
-* **/Hardware** - Current Eagle files for product
 * **/examples** - Measurement and peak-detection examples for the PL-N823
 
 Documentation
