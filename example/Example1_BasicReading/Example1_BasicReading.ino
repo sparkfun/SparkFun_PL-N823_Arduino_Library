@@ -1,4 +1,4 @@
-/*
+/*********************************************************************************
   This example reads the amplified output voltage of the PL-N823 at ADC pin. 
   Will need the SparkFun ADS Library for this example to work.
 
@@ -15,7 +15,7 @@
   Set Serial monitor to 9600.
 
   Distributed as-is; no warranty is given.
- */
+ *********************************************************************************/
 
 #include <SparkFun_ADS1015_Arduino_Library.h> //Click here to get the library: http://librarymanager/All#SparkFun_ADS1015_Arduino_Library
 #include <Wire.h>
