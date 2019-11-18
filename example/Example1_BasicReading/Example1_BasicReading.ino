@@ -1,16 +1,23 @@
 /*
-  By: Brandon Williams
-  SparkFun Electronics
-  Date: September 18th, 2019
-  License: MIT. See license file for more information but you can
-  basically do whatever you want with this code.
+  This example reads the amplified output voltage of the PL-N823 at ADC pin. 
+  Will need the SparkFun ADS Library for this example to work.
 
-  This example just reads a raw data value from the sensor and prints to serial.
+  Brandon Williams in collaboration with SparkX Labs
+  Original Creation Date: September 18th, 2019
 
-  <product URL>
+  This code is Lemonadeware; if you see me (or any other SparkFun employee) at the 
+  local, and you've found our code helpful, please buy us a round!
+
+  https://www.sparkfun.com/products/15804
+
+  Hardware connections:
+  Plug Qwiic IR Breakout to RedBoard using Qwiic cable.
+  Set Serial monitor to 9600.
+
+  Distributed as-is; no warranty is given.
  */
 
-#include <SparkFun_ADS1015_Arduino_Library.h>
+#include <SparkFun_ADS1015_Arduino_Library.h> //Click here to get the library: http://librarymanager/All#SparkFun_ADS1015_Arduino_Library
 #include <Wire.h>
 
 ADS1015 irsensor;                   //Initialize using ADS1015 library
@@ -30,9 +37,8 @@ void setup() {
 void loop() {
   int data;
   data = irsensor.getAnalogData(0);   //Retrieve raw data value from sensor
-//  Serial.print("ADC input voltage: ");
-//  Serial.print(data * multiplier);
-//  Serial.println("mV");
-  Serial.println(data * multiplier);
+  Serial.print("ADC input voltage: ");
+  Serial.print(data * multiplier);
+  Serial.println("mV");
   delay(50);                         //Sample data reading every half second
 }
